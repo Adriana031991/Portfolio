@@ -1,0 +1,208 @@
+---
+import Angular from "./icons/Angular.astro";
+import Css3 from "./icons/Css-3.astro";
+import GitIcon from "./icons/Git-icon.astro";
+import GitHub from "./icons/GitHub.astro";
+import Javascript from "./icons/Javascript.astro";
+import MongodbIcon from "./icons/Mongodb-icon.astro";
+import NGRX from "./icons/NGRX.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Ts_logo from "./icons/Ts_logo.astro";
+import VisualStudioCode from "./icons/Visual-studio-code.astro";
+import Html1 from "./icons/Html-1.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import Sql_server from "./icons/Microsoft_sql_server.astro";
+import Jasmine from "./icons/Jasmine.astro";
+import Agile from "./icons/Agile.astro";
+import { string } from "astro/zod";
+
+interface ITag {
+    name: string;
+    class: string;
+    icon: any;
+}
+
+const TAGS = {
+    // NEXT: {
+    //     name: "Next.js",
+    //     class: "bg-black text-white",
+    //             icon: NextJS,
+    //         },
+    //         TAILWIND: {
+    //             name: "Tailwind CSS",
+    //                     class: "bg-[#003159] text-white",
+    //             icon: Tailwind,
+    //         },
+    ANGULAR: {
+        name: "Angular",
+        class: "bg-[blueviolet] text-white",
+        icon: Angular,
+    },
+    NGRX: {
+        name: "NGRX",
+        class: "bg-[#ba2bd2] text-white",
+        icon: NGRX,
+    },
+    TYPESCRIPT: {
+        name: "Typescript",
+        class: "bg-[#587e94] text-white",
+        icon: Ts_logo,
+    },
+    JAVASCRIPT: {
+        name: "Javascript",
+        class: "bg-[#d0c55d] text-black",
+        icon: Javascript,
+    },
+    NODEJS: {
+        name: "Node Js",
+        class: "bg-[#8aaf7a] text-white",
+        icon: Nodejs,
+    },
+    HTML: {
+        name: "Html",
+        class: "bg-[#da8363] text-white",
+        icon: Html1,
+    },
+    CSS: {
+        name: "Css",
+        class: "bg-[#468bcf] text-white",
+        icon: Css3,
+    },
+    GITHUB: {
+        name: "GitHub",
+        class: "bg-[#333232] text-white",
+        icon: GitHub,
+    },
+    GIT: {
+        name: "Git",
+        class: "bg-[#c3572b] text-white",
+        icon: GitIcon,
+    },
+    VSC: {
+        name: "Visual Studio Code",
+        class: "bg-[#0071bc] text-white",
+        icon: VisualStudioCode,
+    },
+    MONGO: {
+        name: "MongoDB",
+        class: "bg-[#72b14a] text-white",
+        icon: MongodbIcon,
+    },
+    SQLSERVER: {
+        name: "SqlServer",
+        class: "bg-[#b5b5b5] text-black",
+        icon: Sql_server,
+    },
+    JASMINE: {
+        name: "Jasmine",
+        class: "bg-[white] text-black ",
+        icon: Jasmine,
+    },
+    SCRUM: {
+        name: "Metodologia Agil Scrum",
+        class: "bg-[#2eb67d] text-white",
+        icon: Agile,
+    },
+};
+
+const ARRAY_TAGS = Object.values(TAGS);
+---
+
+<section>
+    <ol class="relative border-s border-gray-200 ml-3">
+        <li class="mb-8 ms-4">
+            <div
+                class="absolute size-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+            >
+            </div>
+            <p
+                class="mb-4 text-base font-normal dark:text-gray-200 text-pretty"
+            >
+                Soy una creativa desarrolladora frontend capaz de abordar
+                desafíos con entusiasmo, encontrando soluciones innovadoras
+                superando obstaculos, buscando constantemente mejorar mis
+                habilidades y contribuir al éxito de cada proyecto en el que me
+                involucro.
+            </p>
+        </li>
+
+        <li class="mb-8 ms-4">
+            <div
+                class="absolute size-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+            >
+            </div>
+            <h3
+                class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 my-2"
+            >
+                Stack Tecnologico
+            </h3>
+
+            <ul class="flex flex-wrap gap-x-2 gap-y-2 flex-row my-2">
+                {
+                    ARRAY_TAGS.map((tag) => (
+                        <li>
+                            <span
+                                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+                            >
+                                <tag.icon class="size-4  " />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </li>
+        <li class="mb-8 ms-4">
+            <div
+                class="absolute size-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+            >
+            </div>
+            <h3
+                class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 my-2"
+            >
+                Estudios
+            </h3>
+            <ul class="relative border-s border-gray-200 ml-3">
+                <li class="mb-3 ms-4 grid">
+                    <div
+                        class="absolute size-2 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+                    >
+                    </div>
+                    Tecnologo en análisis y desarrollo de software.
+                    <time
+                        class="my-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
+                        >2022-Actualmente</time
+                    >
+                </li>
+                <li class="mb-3 ms-4 grid">
+                    <div
+                        class="absolute size-2 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+                    >
+                    </div>
+                    Training Desarrollo de Software
+                    <time
+                        class="my-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
+                        >Marzo-Junio 2021</time
+                    >
+                </li>
+            </ul>
+        </li>
+        <li class="mb-10 ms-4">
+            <div
+                class="absolute size-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"
+            >
+            </div>
+            <h3
+                class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 my-2"
+            >
+                Idiomas
+            </h3>
+
+            Ingles <span
+                class="ml-2 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
+                >A2</span
+            >
+        </li>
+    </ol>
+</section>

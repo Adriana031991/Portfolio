@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Junio 2021 - Marzo 2023",
+    title: "Consultor en Desarrollo",
+    description:
+      "\u290D Prototipado y desarrollo de interfaz visual para un proyecto de consulta y actualización de listas gubernamentales utilizando Angular 12 framework con Ng-Zorro Ant Design y libreria NgRx, (construcción de página de inicio, página de cargue de listas para consulta, y página para la parametrización), trabajo bajo metodología scrum, control de vesiones Git con repositorios en Azure.\n \n \n \u290D Desarrollo de nuevas funcionalidades del dashboard administrativo de una plataforma de gestión de clientes que permite conectar canales de atención para administrar conversaciones, utilizando Angular 13, Ng-Zorro Ant Design y libreria NgRx para la interfaz visual.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

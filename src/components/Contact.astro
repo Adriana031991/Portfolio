@@ -1,0 +1,19 @@
+---
+import SocialPill from "./SocialPill.astro";
+import Phone from "./icons/Phone.astro";
+import Whatsapp from "./icons/Whatsapp.astro";
+---
+
+<section class="flex gap-4 flex-wrap mb-10">
+    <SocialPill href="https://wa.me/573003089842">
+        <Whatsapp class="md:size-7 size-6" />
+        Chatea con migo
+    </SocialPill>
+    <SocialPill href="">
+        <Phone class="md:size-6 size-4" />
+        Llámame <span
+            class="my-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80"
+            >+57 3003089842</span
+        >
+    </SocialPill>
+</section>
