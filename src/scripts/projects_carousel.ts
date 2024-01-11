@@ -36,6 +36,16 @@ const next = document.querySelector("#next");
 
 prev?.addEventListener("click", () => {
     if (slider != null) {
+        if (Math.ceil(+slider.style.marginLeft.slice(0, -2)) != 0) {
+            slider.style.marginLeft =
+                +slider.style.marginLeft.slice(0, -2) + cardWidth + "px";
+        }
+    }
+
+});
+
+next?.addEventListener("click", () => {
+    if (slider != null) {
 
         if (
             Math.ceil(+slider.style.marginLeft.slice(0, -2)) !=
@@ -43,16 +53,6 @@ prev?.addEventListener("click", () => {
         ) {
             slider.style.marginLeft =
                 +slider.style.marginLeft.slice(0, -2) - cardWidth + "px";
-        }
-    }
-});
-
-next?.addEventListener("click", () => {
-
-    if (slider != null) {
-        if (Math.ceil(+slider.style.marginLeft.slice(0, -2)) != 0) {
-            slider.style.marginLeft =
-                +slider.style.marginLeft.slice(0, -2) + cardWidth + "px";
         }
     }
 });
